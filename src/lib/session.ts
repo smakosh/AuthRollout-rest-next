@@ -15,9 +15,9 @@ export async function getCurrentUser() {
 
   const data = await res.json();
 
-  if (!data.user) {
+  if (!data?.id) {
     return undefined;
   }
 
-  return data.user;
+  return data;
 }
